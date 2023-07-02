@@ -117,9 +117,27 @@ Se adjunta a esta acta la planificación inicial.
 
 En la actualidad existe una tendencia creciente de monitoreo de parámetros dentro de los procesos productivos en general, con el objetivo de aumentar rendimientos, minimizar el uso de recursos y optimizar los resultados obtenidos. Esto puede extrapolarse al sector agrícola, donde la medición de parámetros involucrados en el desarrollo del fruto, tales como temperatura y humedad del sueldo, ayuda a mejorar la calidad el producto final obtenido.
 
-La implementación de redes de sensores inalámbricas (WSN de sus siglas en ingles wireless sensor network) se ha visto disminuida en costos, principalmente por los avances tecnológicos en lo que respecta a capacidad de integración y diminución consumo, permitiendo la llegada a un mercado masivo.
+Para la medición de los parámetros que el cliente requiera, se deben distribuir sensores con su correspondiente microcontrolador y sistema de energía autónomo, usualmente basado en energía solar. Una vez los sensores fueron distribuidos, la recolección de datos puede realizar de dos diferentes maneras en términos generales:
 
-El objetivo del desarrollo de la WSN como plataforma en sí, es permitir al cliente en particular elegir los parámetros que desea medir en sus cultivos y así dar una mayor personalización en la solución. Además, permite una generalización en el diseño ya que se parte de una base común que abarca la implementación de la red y los protocolos, permitiendo una fácil adaptación a los requerimiento de cada cliente.
+\begin{itemize}
+\item \underline {Recolección manual}: En este esquema, los sensores disponen de una memoria interna sobre la que guardan los valores registrados y cuando desean conocerse los valores se debe descargar los datos uno a uno de manera manual. Esto presenta claras desventajas que imposibilitan su uso en ubicaciones remotas o donde se requiera escalar la cantidad de puntos de medición. Por otro lado, como ventaja presenta su facilidad de uso y bajo costo para aplicaciones específicas de recolección de datos.
+
+\item \underline{Recolección mediante punto de acceso}: Otro manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
+
+\end{itemize}
+
+En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en ingles wireless sensor network) con único punto de acceso como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.5\textwidth]{./Figuras/WSN_architecture.jpg}
+\caption{Arquitectura de una WSN}
+\label{fig:diagBloques}
+\end{figure}
+
+La implementación WSN se ha visto disminuida en costos, principalmente por los avances tecnológicos en lo que respecta a capacidad de integración y disminución consumo, permitiendo la llegada a un mercado masivo.
+
+El propósito del desarrollo de una WSN como plataforma en sí, es permitir al cliente en particular elegir los parámetros que desea medir en sus cultivos y así dar una mayor personalización en la solución. Además, permite una generalización en el diseño ya que se parte de una base común que abarca la implementación de la red y los protocolos, permitiendo una fácil adaptación a los requerimiento de cada cliente.
 
 Las principales ventajas del control de cultivos son:
 
@@ -128,9 +146,10 @@ Las principales ventajas del control de cultivos son:
 \item Prevención de enfermedades
 \item Detección de falencias en el sistema de riego
 \item Identificación de zonas de dañadas por heladas
+\item Uso eficiente de agroquímicos
 \end{itemize}
 
-
+En la actualidad, se utilizan diferentes tecnologías para establecer redes
 
 \begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
 
