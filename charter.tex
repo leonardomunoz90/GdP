@@ -131,14 +131,13 @@ Para la medición de los parámetros que el cliente requiera, se deben distribui
 \item \underline {Recolección manual}: En este esquema, los sensores disponen de una memoria interna sobre la que guardan los valores registrados y cuando desean conocerse los valores se debe descargar los datos uno a uno de manera manual. Esto presenta claras desventajas que imposibilitan su uso en ubicaciones remotas o donde se requiera escalar la cantidad de puntos de medición. Por otro lado, como ventaja presenta su facilidad de uso y bajo costo para aplicaciones específicas de recolección de datos.
 
 \item \underline{Recolección mediante punto de acceso}: Otro manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
-
 \end{itemize}
 
 En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en ingles wireless sensor network) con único punto de acceso a internet como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.9\textwidth]{./Figuras/WSN_architecture.jpg}
+\includegraphics[width=.75\textwidth]{./Figuras/WSN_architecture.jpg}
 \caption{Arquitectura de una WSN}
 \label{fig:WSN_architecture}
 \end{figure}
@@ -147,20 +146,21 @@ La implementación WSN se ha visto disminuida en costos, principalmente por los 
 
 El propósito del desarrollo de una WSN como plataforma en sí, es permitir al cliente en particular elegir los parámetros que desea medir en sus cultivos y así dar una mayor personalización en la solución, por ejemplo, si se desease medir el valor de pH de una zona en particular con un sensor que el cliente requiera, este podría adaptarse de manera casi transparente para la red. Además, permite una generalización en el diseño ya que se parte de una base común que abarca la implementación de la red y los protocolos, permitiendo una fácil adaptación a los requerimiento de cada cliente.
 
-Bajo este esquema, el proyecto requerirá del desarrollo de 3 módulos principales como se observa en la figura \ref{fig:DiagramaGeneral}:
+Bajo este esquema, el proyecto requerirá del desarrollo de 3 módulos principales como se observa en la figura \ref{fig:DiagramaGeneral} y la función de cada uno de estos se lista a continuación:
 
 \begin{itemize}
-\item \uderline {Nodo con punto de acceso o gateway}:
-\item \uderline {Nodo de enrutamiento}:
-\item \uderline {Nodo sensor}:
+\item \underline{Nodo con punto de acceso o gateway}: Es el nodo encargado de la recepción de los datos de toda la red (siguiendo un esquma de red mesh), y enviarlos a internet para que estos disponibles por el usuario, además almacenrá los datos de manera local en caso de que hubiese una falla con el enlace.
+\item \underline{Nodo de enrutamiento}:
+\item \underline{Nodo sensor}:
 \end{itemize}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.9\textwidth]{./Figuras/DiagramaGeneral.jpg}
-\caption{Arquitectura de una WSN}
+\includegraphics[width=.75\textwidth]{./Figuras/DiagramaGeneral.png}
+\caption{Diagrama general}
 \label{fig:DiagramaGeneral}
 \end{figure}
+
 
 En la actualidad, se utilizan diferentes tecnologías para establecer redes de sensores que se diferencian principalmente en consumo, tasa de datos, cantidad de dispositivos que admite, distancia máxima de comunicación y el costo final por nodo de comunicación. Entre estas, pueden listarse las más utilizadas en la actualidad para diversas aplicaciones según sea el objetivo de cada proyecto:
 
