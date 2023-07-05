@@ -195,49 +195,26 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Auspiciante   & -                 &-             	& -       	\\ \hline
+Cliente       & \clientename      &\empclientename	& Apoderado  \\ \hline
+Impulsor      & -                 &-             	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final & Ing. Christian Ciaglo &\empclientename & Ing. Agrónomo\\ \hline
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
-\end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
-
-
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es el desarrollo de una red de sensores distribuidos de bajo costo y con gran escalabilidad, para que los productores dispongan de datos de alta resolución espacial que mejoren la toma de decisiones, aumentando así ganancias y rendimientos de sus cultivos. Esto se propone tomando como base que la mayoría de la matriz productiva Argentina depende del sector agrícola en general. A pesar de esto, un porcentaje muy pequeño de productores disponen de métricas ambientales y de salud de sus cultivos, lo cual podría incrementar el rendimiento de sus cultivos manera significativa. Esto puede deberse a falta de interés por su conocimiento, baja oferta de soluciones en el mercado o bien porque se requiere de una gran inversión inicial.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
+
+Como se especificó en la sección \ref{sec:descripcion}, el proyecto requiere del desarrollo de 3 módulos principales y una interfaz de usuario para la visualización e interpretación de los datos colectados. En lo que refiere a la presentación de proyecto dentro del marco de la \posgrado, no se realizará un software de visualización específico, sino que se adaptará a la utilización de algún software previamente desarrollado que cumpla los requerimientos propuestos.
+
+Se realizará una fabricación de una cantidad de módulos limitada pero suficientes para validar el funcionamiento integral del proyecto propuesto, por lo que no se realizará un lote de producción en serie que afecte la duración del proyecto.
 
 \begin{consigna}{red}
 ¿Qué se incluye y que no se incluye en este proyecto?
@@ -254,16 +231,14 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se toman en cuenta los siguientes supuestos que refieren al marco de desarrollo:
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+\item Disponibilidad de componentes: Si bien en este proyecto se realizará un gran esfuerzo por priorizar el uso de componentes disponibles a nivel nacional, inevitablemente habrán componentes que específicos dentro del diseño que deberán ser adquiridos desde el exterior.
+\item Políticas macroeconómicas: Se se supondrá que las políticas de importación se mantendrán como lo hacen actualmente, lo cual permite el ingreso al país de pequeñas cantidades de componentes sin necesidad de presentar una excesiva cantidad de documentación legal que pueda afectar los tiempos de desarrollo del proyecto.
+\item Desarrollo a nivel prototipo: Este proyecto solo será fabricado a nivel de prototipo sin realizar iteraciones para optimizar la producción en serie del mismo.
+\item Permiso de comunicaciones: Para la comunicaciones dentro de la WSN se utilizará una banda no licenciada para evitar la necesidad de permisos especiales, en caso de que ocurra un cambio legal durante el desarrollo del proyecto se tomará una decisión conjunta con las autoridades del proyecto para evaluar la alternativa no perjudique de manera significativa el desarrollo del proyecto.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
