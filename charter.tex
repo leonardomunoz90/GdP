@@ -150,13 +150,13 @@ Bajo este esquema, el proyecto requerirá del desarrollo de 3 módulos principal
 
 \begin{itemize}
 \item \underline{Nodo con punto de acceso o gateway}: Es el nodo encargado de la recepción de los datos de toda la red (siguiendo un esquma de red mesh), y enviarlos a internet para que estos disponibles por el usuario, además almacenrá los datos de manera local en caso de que hubiese una falla con el enlace.
-\item \underline{Nodo de enrutamiento}:
-\item \underline{Nodo sensor}:
+\item \underline{Nodo de enrutamiento}: Su función es colectar de los datos de los nodos sensores que este tenga conectados y rediccionar mensajes de otros nodos de enrutamiento dentro de la red, para que los mismos puedan llegar al nodo con punto de acceso.
+\item \underline{Nodo sensor}: Es el nodo encargado de la adquisición periódica de los datos del sensor que este tenga conectado y su envío hacia el nodo de enrutamiento más cercano.
 \end{itemize}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.75\textwidth]{./Figuras/DiagramaGeneral.png}
+\includegraphics[width=.6\textwidth]{./Figuras/DiagramaGeneral.png}
 \caption{Diagrama general}
 \label{fig:DiagramaGeneral}
 \end{figure}
@@ -178,15 +178,6 @@ Es importante aclarar que la definición de la tecnología utilizada para la imp
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
- 
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -215,18 +206,6 @@ El propósito de este proyecto es el desarrollo de una red de sensores distribui
 Como se especificó en la sección \ref{sec:descripcion}, el proyecto requiere del desarrollo de 3 módulos principales y una interfaz de usuario para la visualización e interpretación de los datos colectados. En lo que refiere a la presentación de proyecto dentro del marco de la \posgrado, no se realizará un software de visualización específico, sino que se adaptará a la utilización de algún software previamente desarrollado que cumpla los requerimientos propuestos.
 
 Se realizará una fabricación de una cantidad de módulos limitada pero suficientes para validar el funcionamiento integral del proyecto propuesto, por lo que no se realizará un lote de producción en serie que afecte la duración del proyecto.
-
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
-
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
-
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
