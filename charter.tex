@@ -7,7 +7,7 @@ codirector, % Uncomment to add a codirector to the title page
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Desarrollo de plataforma WSN de uso agrícola} 
+\titulo{Red de sensores inalámbricos de uso agrícola personalizable} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -17,7 +17,7 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Leonardo Agustín Muñoz Valdearenas} 
+\autor{Ing. Leonardo Agustín Muñoz Valdearenas} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{TBD}
@@ -69,7 +69,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                 & 04/07/2023 \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 4 de julio de 2023 \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$800.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$800.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -115,66 +115,66 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-En la actualidad existe una tendencia creciente de monitoreo de parámetros dentro de los procesos productivos en general, con el objetivo de aumentar rendimientos, minimizar el uso de recursos y optimizar los resultados obtenidos. Esto puede extrapolarse al sector agrícola, donde la medición de parámetros involucrados en el desarrollo del fruto, tales como temperatura y humedad del sueldo, ayuda a mejorar la calidad el producto final obtenido. Las principales ventajas del monitoreo y control de cultivos mediante este tipo de técnicas son:
+En la actualidad, se observa una tendencia en alza hacia el monitoreo de parámetros en los procesos productivos en general. El propósito de esta práctica es incrementar los rendimientos, reducir el consumo de recursos y optimizar los resultados obtenidos. Esto puede extrapolarse al sector agrícola, donde la medición de parámetros involucrados en el desarrollo del fruto, tales como temperatura y humedad del sueldo, ayuda a mejorar la calidad el producto final obtenido. Las principales ventajas del monitoreo y control de cultivos mediante este tipo de técnicas son:
 
 \begin{itemize}
-\item Ahorro de agua de riego
-\item Prevención de enfermedades
-\item Detección de falencias en el sistema de riego
-\item Identificación de zonas de dañadas por heladas
-\item Uso eficiente de agroquímicos
+\item Ahorro de agua de riego.
+\item Prevención de enfermedades.
+\item Detección de falencias en el sistema de riego.
+\item Identificación de zonas dañadas por heladas.
+\item Uso eficiente de agroquímicos.
 \end{itemize}
 
-Para la medición de los parámetros que el cliente requiera, se deben distribuir sensores con su correspondiente microcontrolador y sistema de energía autónomo, usualmente basado en energía solar. Una vez los sensores fueron distribuidos, la recolección de datos puede realizar de dos diferentes maneras en términos generales:
+Para la medición de los parámetros que el cliente requiera, se deben distribuir sensores con su correspondiente microcontrolador y sistema de energía autónomo, usualmente basado en energía solar. Una vez los sensores fueron distribuidos, la recolección de datos se puede realizar de dos diferentes maneras en términos generales:
 
 \begin{itemize}
-\item \underline {Recolección manual}: En este esquema, los sensores disponen de una memoria interna sobre la que guardan los valores registrados y cuando desean conocerse los valores se debe descargar los datos uno a uno de manera manual. Esto presenta claras desventajas que imposibilitan su uso en ubicaciones remotas o donde se requiera escalar la cantidad de puntos de medición. Por otro lado, como ventaja presenta su facilidad de uso y bajo costo para aplicaciones específicas de recolección de datos.
+\item Recolección manual: en este esquema los nodos sensores registran las mediciones en una memoria interna y el usuario debe extraer dichas mediciones periodicamente de manera manual. Si bien es una solución sencilla y de bajo costo, su desventaja principal es su imposibilidad de uso en ubicaciones remotas de dificil acceso.
 
-\item \underline{Recolección mediante punto de acceso}: Otro manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
+\item Recolección mediante punto de acceso: otra manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
 \end{itemize}
 
-En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en ingles wireless sensor network) con único punto de acceso a internet como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
+En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en ingles Wireless Sensor Network) con único punto de acceso a internet como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.75\textwidth]{./Figuras/WSN_architecture.jpg}
-\caption{Arquitectura de una WSN}
+\includegraphics[width=1\textwidth]{./Figuras/WSN_architecture.jpg}
+\caption{Arquitectura de una WSN.}
 \label{fig:WSN_architecture}
 \end{figure}
 
-La implementación WSN se ha visto disminuida en costos, principalmente por los avances tecnológicos en lo que respecta a capacidad de integración y disminución consumo, permitiendo la llegada a un mercado masivo.
+La implementación WSN se ha visto disminuida en costos, principalmente por los avances tecnológicos en lo que respecta a capacidad de integración y disminución de consumo, permitiendo la llegada a un mercado masivo.
 
-El propósito del desarrollo de una WSN como plataforma en sí, es permitir al cliente en particular elegir los parámetros que desea medir en sus cultivos y así dar una mayor personalización en la solución, por ejemplo, si se desease medir el valor de pH de una zona en particular con un sensor que el cliente requiera, este podría adaptarse de manera casi transparente para la red. Además, permite una generalización en el diseño ya que se parte de una base común que abarca la implementación de la red y los protocolos, permitiendo una fácil adaptación a los requerimiento de cada cliente.
+El propósito del desarrollo de una WSN como plataforma en sí, es permitir al cliente en particular elegir los parámetros que desea medir en sus cultivos y así dar una mayor personalización en la solución, por ejemplo, si se desease medir el valor de pH de una zona en particular con un sensor que el cliente requiera, este podría adaptarse de manera casi transparente para la red. Además, permite una generalización en el diseño ya que se parte de una base común que abarca la implementación de la red y los protocolos, permitiendo una fácil adaptación a los requerimientos de cada cliente.
 
-Bajo este esquema, el proyecto requerirá del desarrollo de 3 módulos principales como se observa en la figura \ref{fig:DiagramaGeneral} y la función de cada uno de estos se lista a continuación:
+Bajo este esquema, el proyecto requerirá del desarrollo de tres módulos principales como se observa en la figura \ref{fig:DiagramaGeneral} y la función de cada uno de estos se lista a continuación:
 
 \begin{itemize}
-\item \underline{Nodo con punto de acceso o gateway}: Es el nodo encargado de la recepción de los datos de toda la red (siguiendo un esquma de red mesh), y enviarlos a internet para que estos disponibles por el usuario, además almacenrá los datos de manera local en caso de que hubiese una falla con el enlace.
-\item \underline{Nodo de enrutamiento}: Su función es colectar de los datos de los nodos sensores que este tenga conectados y rediccionar mensajes de otros nodos de enrutamiento dentro de la red, para que los mismos puedan llegar al nodo con punto de acceso.
-\item \underline{Nodo sensor}: Es el nodo encargado de la adquisición periódica de los datos del sensor que este tenga conectado y su envío hacia el nodo de enrutamiento más cercano.
+\item Nodo con punto de acceso o gateway: es el nodo encargado de la recepción de los datos de toda la red (siguiendo un esquema de red mesh), y enviarlos a internet para que estén disponibles para el usuario. Además almacenará los datos de manera local en caso de que hubiese una falla con el enlace.
+\item Nodo de enrutamiento: su función es colectar de los datos de los nodos sensores que este tenga conectados y rediccionar mensajes de otros nodos de enrutamiento dentro de la red, para que los mismos puedan llegar al nodo con punto de acceso.
+\item Nodo sensor: es el nodo encargado de la adquisición periódica de los datos del sensor que este tenga conectado y su envío hacia el nodo de enrutamiento más cercano.
 \end{itemize}
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
-\includegraphics[width=.6\textwidth]{./Figuras/DiagramaGeneral.png}
-\caption{Diagrama general}
+\includegraphics[width=.9\textwidth]{./Figuras/DiagramaGeneral.png}
+\caption{Diagrama general de la red WSN propuesta.}
 \label{fig:DiagramaGeneral}
 \end{figure}
 
 
-En la actualidad, se utilizan diferentes tecnologías para establecer redes de sensores que se diferencian principalmente en consumo, tasa de datos, cantidad de dispositivos que admite, distancia máxima de comunicación y el costo final por nodo de comunicación. Entre estas, pueden listarse las más utilizadas en la actualidad para diversas aplicaciones según sea el objetivo de cada proyecto:
+En la actualidad existen diferentes tecnologías para el transceiver que se encuentra dentro de los módulos mencionados previamente. Estas se diferencian principalmente en lo que refiere a consumo, tasa de datos, cantidad de dispositivos que admite, distancia máxima de comunicación y el costo final por nodo de comunicación. Las más utilizadas se listan a continuación:
 
 \begin{itemize}
-\item Bluetooth de bajo consumo
-\item LoraWAN
-\item Narrow Band IoT
-\item Sigfox
-\item 6LoWPAN
-\item WiFi
-\item Zigbee
+\item Bluetooth de bajo consumo.
+\item LoraWAN.
+\item Narrow Band IoT.
+\item Sigfox.
+\item 6LoWPAN.
+\item WiFi.
+\item Zigbee.
 \end{itemize}
 
-Es importante aclarar que la definición de la tecnología utilizada para la implementación el presente proyecto se realizará durante el proceso de desarrollo. A modo de análisis preliminar, debe optarse por una opción que priorice el bajo consumo por sobre una alta tasa de datos ya que en aplicaciones agrícolas los parámetros a analizar son en general de variación lenta. Ademas se prevé una distancia entre nodos sensores del orden de decenas de metros en lugar de kilómetros, por lo que una tecnología de gran alcance no resulta algo prioritario.
+Es importante aclarar que la definición del tipo de transceiver utilizado en el presente proyecto se realizará durante el desarrollo el proyecto. A modo de análisis preliminar, debe optarse por una opción que priorice el bajo consumo por sobre una alta tasa de datos ya que en aplicaciones agrícolas los parámetros a analizar son en general de variación lenta. Además, se prevé una distancia entre nodos sensores del orden de decenas de metros en lugar de kilómetros, por lo que una tecnología de gran alcance no resulta algo prioritario.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -186,24 +186,30 @@ Es importante aclarar que la definición de la tecnología utilizada para la imp
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & -                 &-             	& -       	\\ \hline
 Cliente       & \clientename      &\empclientename	& Apoderado  \\ \hline
-Impulsor      & -                 &-             	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
 Usuario final & Ing. Christian Ciaglo &\empclientename & Ing. Agrónomo\\ \hline
 \end{tabularx}
 \end{table}
 
+Las características principales de cada uno de los interesados listados previamente son:
+
+\begin{itemize}
+\item \clientename : 
+\item Director : aún sin definir.
+\item Ing. Christian Ciaglo :
+\end{itemize}
+
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es el desarrollo de una red de sensores distribuidos de bajo costo y con gran escalabilidad, para que los productores dispongan de datos de alta resolución espacial que mejoren la toma de decisiones, aumentando así ganancias y rendimientos de sus cultivos. Esto se propone tomando como base que la mayoría de la matriz productiva Argentina depende del sector agrícola en general. A pesar de esto, un porcentaje muy pequeño de productores disponen de métricas ambientales y de salud de sus cultivos, lo cual podría incrementar el rendimiento de sus cultivos manera significativa. Esto puede deberse a falta de interés por su conocimiento, baja oferta de soluciones en el mercado o bien porque se requiere de una gran inversión inicial.
+El propósito de este proyecto es el desarrollo de una red de sensores distribuidos de bajo costo y con gran escalabilidad, para que los productores dispongan de datos de alta resolución espacial que mejoren la toma de decisiones, aumentando así ganancias y rendimientos de sus cultivos. Esto se propone tomando como base que la mayoría de la matriz productiva Argentina depende del sector agrícola en general. A pesar de esto, un porcentaje muy pequeño de productores disponen de métricas ambientales y de salud de sus cultivos, lo cual podría incrementar el rendimiento de sus cultivos de manera significativa. Esto puede deberse a falta de interés por su conocimiento, baja oferta de soluciones en el mercado o bien porque se requiere de una gran inversión inicial.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-Como se especificó en la sección \ref{sec:descripcion}, el proyecto requiere del desarrollo de 3 módulos principales y una interfaz de usuario para la visualización e interpretación de los datos colectados. En lo que refiere a la presentación de proyecto dentro del marco de la \posgrado, no se realizará un software de visualización específico, sino que se adaptará a la utilización de algún software previamente desarrollado que cumpla los requerimientos propuestos.
+Como se especificó en la sección \ref{sec:descripcion}, el proyecto requiere del desarrollo de tres módulos principales y una interfaz de usuario para la visualización e interpretación de los datos colectados. En lo que refiere a la presentación de proyecto dentro del marco de la \degreename, no se realizará un software de visualización específico, sino que se adaptará a la utilización de algún software previamente desarrollado que cumpla los requerimientos propuestos.
 
 Se realizará una fabricación de una cantidad de módulos limitada pero suficientes para validar el funcionamiento integral del proyecto propuesto, por lo que no se realizará un lote de producción en serie que afecte la duración del proyecto.
 
@@ -213,10 +219,10 @@ Se realizará una fabricación de una cantidad de módulos limitada pero suficie
 Para el desarrollo del presente proyecto se toman en cuenta los siguientes supuestos que refieren al marco de desarrollo:
 
 \begin{itemize}
-\item Disponibilidad de componentes: Si bien en este proyecto se realizará un gran esfuerzo por priorizar el uso de componentes disponibles a nivel nacional, inevitablemente habrán componentes que específicos dentro del diseño que deberán ser adquiridos desde el exterior.
-\item Políticas macroeconómicas: Se se supondrá que las políticas de importación se mantendrán como lo hacen actualmente, lo cual permite el ingreso al país de pequeñas cantidades de componentes sin necesidad de presentar una excesiva cantidad de documentación legal que pueda afectar los tiempos de desarrollo del proyecto.
-\item Desarrollo a nivel prototipo: Este proyecto solo será fabricado a nivel de prototipo sin realizar iteraciones para optimizar la producción en serie del mismo.
-\item Permiso de comunicaciones: Para la comunicaciones dentro de la WSN se utilizará una banda no licenciada para evitar la necesidad de permisos especiales, en caso de que ocurra un cambio legal durante el desarrollo del proyecto se tomará una decisión conjunta con las autoridades del proyecto para evaluar la alternativa no perjudique de manera significativa el desarrollo del proyecto.
+\item Disponibilidad de componentes: si bien en este proyecto se realizará un gran esfuerzo por priorizar el uso de componentes disponibles a nivel nacional, inevitablemente habrán componentes específicos dentro del diseño que deberán ser adquiridos desde el exterior.
+\item Políticas macroeconómicas: se supondrá que las políticas de importación se mantendrán como lo hacen actualmente, lo cual permite el ingreso al país de pequeñas cantidades de componentes sin necesidad de presentar una excesiva cantidad de documentación legal que pueda afectar los tiempos de desarrollo del proyecto.
+\item Desarrollo a nivel prototipo: este proyecto solo será fabricado a nivel de prototipo sin realizar iteraciones para optimizar la producción en serie del mismo.
+\item Permiso de comunicaciones: para la comunicaciones dentro de la WSN se utilizará una banda no licenciada para evitar la necesidad de permisos especiales, en caso de que ocurra un cambio legal durante el desarrollo del proyecto se tomará una decisión conjunta con las autoridades del proyecto para evaluar que la alternativa no perjudique de manera significativa el desarrollo del proyecto.
 \end{itemize}
 
 \section{6. Requerimientos}
