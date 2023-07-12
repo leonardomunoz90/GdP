@@ -70,7 +70,7 @@ codirector, % Uncomment to add a codirector to the title page
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 4 de julio de 2023 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 9 inclusive					& 12 de julio de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -196,9 +196,9 @@ Usuario final & Ing. Christian Ciaglo &\empclientename & Ing. Agrónomo\\ \hline
 Las características principales de cada uno de los interesados listados previamente son:
 
 \begin{itemize}
-\item \clientename : 
+\item \clientename : persona entusiasta, fomenta la inversión en nuevas tecnologías dentro de su empresa pero siempre que se demuestre fehasientemente que lo inversión será rentable. Como cualquier persona con un cargo gerencial, dispone de poco tiempo por lo que los resultados deben ser concisos y comprobables.
 \item Director : aún sin definir.
-\item Ing. Christian Ciaglo :
+\item Ing. Christian Ciaglo : ingeniero agrónomo a cargo del cuidado del viñedo de la bodega, actualmente tiene instalados sensores del estilo de recolección manual (como se categorizó en la sección \ref{sec:descripcion}). Es la persona que ayudará a establecer los requerimientos de los sensores y será el principal beneficiario de los resultados del proyecto, por lo que es de gran importancia mantener una comunicación periódica durante la etapa temprana del proyecto.
 \end{itemize}
 
 \section{3. Propósito del proyecto}
@@ -228,105 +228,188 @@ Para el desarrollo del presente proyecto se toman en cuenta los siguientes supue
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales
+	
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+		
+			\item Comunicaciones.
+			\begin{enumerate}
+				\item Se debe usar una frecuencia de uso no licenciado.
+				\item En cada red debe haber solamente un único nodo gateway.
+				\item El nodo gateway debe enviar los datos internet mediante la red celular.
+				\item Cada módulo debe tener un identicador único.
+				\item Se debe implementar confirmación de recepción de paquetes.
+				\item Los módulos debe tener un indicador lumínico para indicar errores.
+			\end{enumerate}
+			
+			\item Alimentación.
+			\begin{enumerate}
+				\item Los módulos deben disponer de un panel solar.
+				\item Los módulos deben almacenar energía en una batería.
+				\item Todos los módulos deben enviar su porcentaje de batería restante de forma periódica.
+				\item La vida útil de la batería debe ser mayor a 10 años.
+			\end{enumerate}
+			
+			\item Datos.
+			\begin{enumerate}
+				\item Cada nodo envía una única medición por trama.
+				\item El nodo gateway debe tener una memoria auxiliar donde almacene los datos.
+				\item El nodo gateway debe colocar una estampa de tiempo a los datos.
+			\end{enumerate}
+			
 		\end{enumerate}
-	\item Requerimientos de documentación
+	\item Requerimientos de documentación.
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Se debe documentar de manera clara el mecanismo de comunicación.
+			\item Los formatos de trama deben estar claramente documentados.
+			\item Se deberá justificar el dimensionamiento del sistema de alimentación de cada tipo de módulo.
+			\item Se deberán documentar procedimientos de puesta en marcha de los módulos.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+
+	\item Requerimientos de testing.
+		\begin{enumerate}
+			\item Se deben presentar resultados de cobertura de las pruebas unitarias y de integración.
+			\item Se deben realizar pruebas de aceptación en presencia del cliente.
+			\item Se deben evidenciar los resultados obtenidos en las pruebas de sistema.
+		\end{enumerate}
+
+	\item Requerimientos de interoperatividad.
+		\begin{enumerate}
+			\item Los datos enviados a internet deben tener un formato JSON, de tal forma de ser compatible con interfaces de usuario desarrolladas por terceros.
+		\end{enumerate}
+					
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+A continuación se muestra el puntaje que se asignará a cada item dentro de los \textit{story points}:
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+\begin{enumerate}
+	\item Dificultad.
+	\begin{itemize}
+		\item Baja 2.
+		\item Media 5.
+		\item Alta 13.
+	\end{itemize}
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+\item Complejidad.
+	\begin{itemize}
+		\item Baja 5.
+		\item Media 8.
+		\item Alta 13.
+	\end{itemize}
+
+\item Riesgo.
+	\begin{itemize}
+		\item Baja 1.
+		\item Media 3.
+		\item Alta 8.
+	\end{itemize}
+\end{enumerate}
+
+
+Como cliente quiero que la cantidad de módulos pueda escalarse para cubrir la superficie de todo el viñedo.
+\begin{itemize}
+\item Dificultad media (5): lograr establecer numerosos enlaces de radio de baja potencia y de manera simultánea en una gran extensión no es una tarea trivial, aunque no se espera que sea de gran dificultad. 
+\item Complejidad alta(13): requerirá la implementación de un protocolo de comunicación lo suficientemente robusto para establecer cientos de enlaces, por lo que complejizará significativamente el esquema de acceso al medio.
+\item Riesgo alto(8): en caso de que esto no pueda lograrse, significaría un gran fracaso en el proyecto y requeriría de un replanteamiento de hardware y de topología de la red.
+\end{itemize}
+\textit{Story point}: 34.
+
+Como usuario quiero que los nodos sensores sean versatiles para poder probar diferentes sensores y poder experimentar en función de los resultados.
+\begin{itemize}
+\item Dificultad baja (2): los sensores comerciales en su mayoría utilizan interfaces de comunicación estándar, por lo que se prevé que la integración de estos sea relativamente sencilla.
+\item Complejidad media(8): se requerirá implementar el driver para el sensor en particular (tramas, tasa de datos, control de errores, etc.).
+\item Riesgo medio(3): en caso de que no pueda realizarse la adapatación directa con algún sensor específico, se espera que las horas de ingeniería para adaptarlo a la plataforma sean bajas.
+\end{itemize}
+\textit{Story point}: 13.
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
-	\item Informe final
-	\item etc...
+	\item Un prototipo del nodo gateway.
+	\item Dos prototipos del nodo de enrutamiento.
+	\item Cuatro prototipos del nodo sensor.
+	\item Circuitos esquemáticos.
+	\item Código fuente del firmware.
+	\item Intrucciones de puesta en marcha.
+	\item Manual de usuario.
+	\item Informe final.
 \end{itemize}
 
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
+A continuación se presenta el desglose de trabajo en tareas con su correspondiente duración estimada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Desarrollo de módulos.
+
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+	
+	\item Enlace de comunicación (subtotal 160 h).
+		\begin{enumerate}
+			\item Implementación de protocolo dentro de la WSN (30 h).
+			\item Desarrollo del método de enrutamiento automático (30 h).
+			\item Definición de formato de tramas (15 h).
+			\item Desarrollo de la interfaz con el transceiver (40 h).
+			\item Realizar control de paquetes (25 h).
+			\item Desarrollo de la interfaz con módulo de red celular (20 h).
+			
+		\end{enumerate}
+		
+	\item Alimentación (subtotal 55 h).
+	
+		\begin{enumerate}
+			\item Estimación y verificación de consumos (10 h).
+			\item Dimensionamiento de componentes (15 h).
+			\item Selección de componentes (30 h).
+			
+		\end{enumerate}
+		
+	\item Sensores (subtotal 60 h).
+	
+		\begin{enumerate}
+			\item Selección de sensores (20 h).
+			\item Programación de drivers específicos (40 h).
+		\end{enumerate}
+	
+	\item Armado (subtotal 120 h).
+	
+		\begin{enumerate}
+			\item Diseño de esquemáticos (40 h).
+			\item Armado y prueba de prototipo (20 h).
+			\item Diseño de placas (40 h).
+			\item Ensamblaje de módulos definitivos (30 h).
+		
+		\end{enumerate}
+		
 	\end{enumerate}
-\item Grupo de tareas 2
+	
+\item Testing (subtotal 90 h).
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Realizar pruebas unitarias (40 h).
+	\item Realizar pruebas de integración (25 h).
+	\item Realizar pruebas de sistema (25 h).
 	\end{enumerate}
-\item Grupo de tareas 3
+	
+\item Documentación (subtotal 90 h).
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Realizar reporte de testing (30 h).
+	\item Redacción de manual de usuario (20 h).
+	\item Redacción de memoria de trabajo final (40 h).
+	\item Elaboración de presentación de proyecto (20 h).
 	\end{enumerate}
+	
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
-
-\end{consigna}
+Total de horas del proyecto: 605 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
