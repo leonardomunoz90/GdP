@@ -7,7 +7,7 @@ codirector, % Uncomment to add a codirector to the title page
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Red de sensores inalámbricos de uso agrícola personalizable} 
+\titulo{Red personalizable de sensores inalámbricos de uso agrícola} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -71,6 +71,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 4 de julio de 2023 \\ \hline
 2      & Se completa hasta el punto 9 inclusive					& 12 de julio de 2023 \\ \hline
+3      & Se completa hasta el punto 12 inclusive				& 25 de julio de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -92,7 +93,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$800.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 625 h de trabajo y \textcolor{red}{\$800.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -128,7 +129,7 @@ En la actualidad, se observa una tendencia en alza hacia el monitoreo de paráme
 Para la medición de los parámetros que el cliente requiera, se deben distribuir sensores con su correspondiente microcontrolador y sistema de energía autónomo, usualmente basado en energía solar. Una vez los sensores fueron distribuidos, la recolección de datos se puede realizar de dos diferentes maneras en términos generales:
 
 \begin{itemize}
-\item Recolección manual: en este esquema los nodos sensores registran las mediciones en una memoria interna y el usuario debe extraer dichas mediciones periodicamente de manera manual. Si bien es una solución sencilla y de bajo costo, su desventaja principal es su imposibilidad de uso en ubicaciones remotas de dificil acceso.
+\item Recolección manual: en este esquema los nodos sensores registran las mediciones en una memoria interna y el usuario debe extraer dichas mediciones periodicamente de manera manual. Si bien es una solución sencilla y de bajo costo, su desventaja principal es su imposibilidad de uso en ubicaciones remotas de difícil acceso.
 
 \item Recolección mediante punto de acceso: otra manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
 \end{itemize}
@@ -170,7 +171,7 @@ En la actualidad existen diferentes tecnologías para el transceiver que se encu
 \item Narrow Band IoT.
 \item Sigfox.
 \item 6LoWPAN.
-\item WiFi.
+\item Wi-Fi.
 \item Zigbee.
 \end{itemize}
 
@@ -196,7 +197,7 @@ Usuario final & Ing. Christian Ciaglo &\empclientename & Ing. Agrónomo\\ \hline
 Las características principales de cada uno de los interesados listados previamente son:
 
 \begin{itemize}
-\item \clientename : persona entusiasta, fomenta la inversión en nuevas tecnologías dentro de su empresa pero siempre que se demuestre fehasientemente que lo inversión será rentable. Como cualquier persona con un cargo gerencial, dispone de poco tiempo por lo que los resultados deben ser concisos y comprobables.
+\item \clientename : persona entusiasta, fomenta la inversión en nuevas tecnologías dentro de su empresa pero siempre que se demuestre fehasientemente que la inversión será rentable. Como cualquier persona con un cargo gerencial, dispone de poco tiempo por lo que los resultados deben ser concisos y comprobables.
 \item Director : aún sin definir.
 \item Ing. Christian Ciaglo : ingeniero agrónomo a cargo del cuidado del viñedo de la bodega, actualmente tiene instalados sensores del estilo de recolección manual (como se categorizó en la sección \ref{sec:descripcion}). Es la persona que ayudará a establecer los requerimientos de los sensores y será el principal beneficiario de los resultados del proyecto, por lo que es de gran importancia mantener una comunicación periódica durante la etapa temprana del proyecto.
 \end{itemize}
@@ -237,9 +238,9 @@ Para el desarrollo del presente proyecto se toman en cuenta los siguientes supue
 			\begin{enumerate}
 				\item Se debe usar una frecuencia de uso no licenciado.
 				\item En cada red debe haber solamente un único nodo gateway.
-				\item El nodo gateway debe enviar los datos internet mediante la red celular.
-				\item Cada módulo debe tener un identicador único.
-				\item Se debe implementar confirmación de recepción de paquetes.
+				\item El nodo gateway debe enviar los datos a internet mediante la red celular.
+				\item Cada módulo debe tener un identificador único.
+				\item Se debe implementar un protocolo de comunicación con confirmación de recepción de paquetes.
 				\item Los módulos debe tener un indicador lumínico para indicar errores.
 			\end{enumerate}
 			
@@ -247,7 +248,7 @@ Para el desarrollo del presente proyecto se toman en cuenta los siguientes supue
 			\begin{enumerate}
 				\item Los módulos deben disponer de un panel solar.
 				\item Los módulos deben almacenar energía en una batería.
-				\item Todos los módulos deben enviar su porcentaje de batería restante de forma periódica.
+				\item Todos los módulos deben enviar el porcentaje de batería restante de forma periódica.
 				\item La vida útil de la batería debe ser mayor a 10 años.
 			\end{enumerate}
 			
@@ -261,10 +262,11 @@ Para el desarrollo del presente proyecto se toman en cuenta los siguientes supue
 		\end{enumerate}
 	\item Requerimientos de documentación.
 		\begin{enumerate}
-			\item Se debe documentar de manera clara el mecanismo de comunicación.
+			\item Se debe documentar de manera clara el protocolo de comunicación.
 			\item Los formatos de trama deben estar claramente documentados.
 			\item Se deberá justificar el dimensionamiento del sistema de alimentación de cada tipo de módulo.
 			\item Se deberán documentar procedimientos de puesta en marcha de los módulos.
+			\item Se deberá realizar un informe de avance del proyecto y una memoria de trabajo final, una vez finalizado el mismo.
 		\end{enumerate}
 
 	\item Requerimientos de testing.
@@ -313,16 +315,16 @@ A continuación se muestra el puntaje que se asignará a cada item dentro de los
 Como cliente quiero que la cantidad de módulos pueda escalarse para cubrir la superficie de todo el viñedo.
 \begin{itemize}
 \item Dificultad media (5): lograr establecer numerosos enlaces de radio de baja potencia y de manera simultánea en una gran extensión no es una tarea trivial, aunque no se espera que sea de gran dificultad. 
-\item Complejidad alta(13): requerirá la implementación de un protocolo de comunicación lo suficientemente robusto para establecer cientos de enlaces, por lo que complejizará significativamente el esquema de acceso al medio.
-\item Riesgo alto(8): en caso de que esto no pueda lograrse, significaría un gran fracaso en el proyecto y requeriría de un replanteamiento de hardware y de topología de la red.
+\item Complejidad alta (13): requerirá la implementación de un protocolo de comunicación lo suficientemente robusto para establecer cientos de enlaces, por lo que complejizará significativamente el esquema de acceso al medio.
+\item Riesgo alto (8): en caso de que esto no pueda lograrse, significaría un gran fracaso en el proyecto y requeriría de un replanteamiento de hardware y de la topología de la red.
 \end{itemize}
 \textit{Story point}: 34.
 
-Como usuario quiero que los nodos sensores sean versatiles para poder probar diferentes sensores y poder experimentar en función de los resultados.
+Como usuario quiero que los nodos sensores sean versátiles para poder probar diferentes sensores y poder experimentar en función de los resultados.
 \begin{itemize}
 \item Dificultad baja (2): los sensores comerciales en su mayoría utilizan interfaces de comunicación estándar, por lo que se prevé que la integración de estos sea relativamente sencilla.
-\item Complejidad media(8): se requerirá implementar el driver para el sensor en particular (tramas, tasa de datos, control de errores, etc.).
-\item Riesgo medio(3): en caso de que no pueda realizarse la adapatación directa con algún sensor específico, se espera que las horas de ingeniería para adaptarlo a la plataforma sean bajas.
+\item Complejidad media (8): se requerirá implementar el driver para el sensor en particular (tramas, tasa de datos, control de errores, etc.).
+\item Riesgo medio (3): en caso de que no pueda realizarse la adapatación directa con algún sensor específico, se espera que las horas de ingeniería para adaptarlo a la plataforma sean bajas.
 \end{itemize}
 \textit{Story point}: 13.
 
@@ -355,9 +357,9 @@ A continuación se presenta el desglose de trabajo en tareas con su correspondie
 	
 	\item Enlace de comunicación (subtotal 160 h).
 		\begin{enumerate}
-			\item Implementación de protocolo dentro de la WSN (30 h).
+			\item Implementación del protocolo dentro de la WSN (30 h).
 			\item Desarrollo del método de enrutamiento automático (30 h).
-			\item Definición de formato de tramas (15 h).
+			\item Definición del formato de tramas (15 h).
 			\item Desarrollo de la interfaz con el transceiver (40 h).
 			\item Realizar control de paquetes (25 h).
 			\item Desarrollo de la interfaz con módulo de red celular (20 h).
@@ -380,11 +382,11 @@ A continuación se presenta el desglose de trabajo en tareas con su correspondie
 			\item Programación de drivers específicos (40 h).
 		\end{enumerate}
 	
-	\item Armado (subtotal 120 h).
+	\item Armado (subtotal 130 h).
 	
 		\begin{enumerate}
 			\item Diseño de esquemáticos (40 h).
-			\item Armado y prueba de prototipo (20 h).
+			\item Armado y prueba del prototipo (20 h).
 			\item Diseño de placas (40 h).
 			\item Ensamblaje de módulos definitivos (30 h).
 		
@@ -399,17 +401,18 @@ A continuación se presenta el desglose de trabajo en tareas con su correspondie
 	\item Realizar pruebas de sistema (25 h).
 	\end{enumerate}
 	
-\item Documentación (subtotal 90 h).
+\item Documentación (subtotal 130 h).
 	\begin{enumerate}
 	\item Realizar reporte de testing (30 h).
-	\item Redacción de manual de usuario (20 h).
-	\item Redacción de memoria de trabajo final (40 h).
-	\item Elaboración de presentación de proyecto (20 h).
+	\item Redacción del manual de usuario (20 h).
+	\item Elaboración del informe de avance (20 h).
+	\item Redacción de la memoria de trabajo final (40 h).
+	\item Elaboración de la presentación de proyecto (20 h).
 	\end{enumerate}
 	
 \end{enumerate}
 
-Total de horas del proyecto: 605 h.
+Total de horas del proyecto: 625 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
