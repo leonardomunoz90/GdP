@@ -134,7 +134,7 @@ Para la medición de los parámetros que el cliente requiera, se deben distribui
 \item Recolección mediante punto de acceso: otra manera de obtener las mediciones de los sensores distribuidos es mediante una conexión a internet a través de un punto de acceso (o usualmente llamado gateway), de esta manera los datos son accesibles para el usuario de manera remota por medio de una base de datos. Este concepto de utilizar un punto de acceso a internet es lo que hoy se conoce como internet de la cosas (IoT de sus siglas en inglés). Es evidente que un esquema de este estilo mejora de manera significativa la experiencia de usuario de acceso los datos, aunque implica una mayor complejidad por la necesidad de mantener activo un enlace de comunicaciones y eventualmente requerir algún mantenimiento.
 \end{itemize}
 
-En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en ingles Wireless Sensor Network) con único punto de acceso a internet como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
+En este proyecto se propone la utilización del segundo esquema de recolección de datos planteado previamente, aunque reemplazando el acceso a internet de un único sensor por una red de sensores inalámbrica (WSN de sus siglas en inglés Wireless Sensor Network) con único punto de acceso a internet como puede observarse a continuación en la figura \ref{fig:WSN_architecture}.
 
 \begin{figure}[htpb]
 \centering 
@@ -351,7 +351,7 @@ Los entregables del proyecto son:
 A continuación se presenta el desglose de trabajo en tareas con su correspondiente duración estimada:
 
 \begin{enumerate}
-\item Desarrollo de módulos.
+\item Desarrollo de módulos (subtotal 405).
 
 	\begin{enumerate}
 	
@@ -406,8 +406,8 @@ A continuación se presenta el desglose de trabajo en tareas con su correspondie
 	\item Realizar reporte de testing (30 h).
 	\item Redacción del manual de usuario (20 h).
 	\item Elaboración del informe de avance (20 h).
-	\item Redacción de la memoria de trabajo final (40 h).
-	\item Elaboración de la presentación de proyecto (20 h).
+	\item Redacción de la memoria del trabajo final (40 h).
+	\item Elaboración de la presentación del proyecto (20 h).
 	\end{enumerate}
 	
 \end{enumerate}
@@ -417,97 +417,36 @@ Total de horas del proyecto: 625 h.
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
+En la figura \ref{fig:AoN} se muestra el diagrama de AoN (Activity on Node de sus siglas en inglés) del presente proyecto, siguiendo el desgloce de tareas reviamente definido en la sección \ref{sec:wbs}. Las referencias temporales de cada una de las actividades se encuentran especificadas en horas. 
 
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
-
+\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[height=0.5\textheight]{./Figuras/AoN.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
-
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
+\end{landscape}
 
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
+En la figura \ref{fig:diagGantt}, se muestra el diagrama de Gantt del presente proyecto siguiendo el desgloce de tareas de la sección \ref{sec:wbs}.
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
+\includegraphics[height=.90\textheight]{./Figuras/gantt.pdf}
+\caption{Diagrama de Gantt del proyecto}
 \label{fig:diagGantt}
 \end{figure}
 
 \end{landscape}
 
-\end{consigna}
-
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -520,24 +459,64 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+Placa de desarrollo STM32G031 &
+  \multicolumn{1}{c|}{3} &
+  \multicolumn{1}{c|}{\$ 5.000} &
+  \multicolumn{1}{c|}{\$ 15.000} \\ \hline
+  
+Microcontrolador SMT32G031 &
+  \multicolumn{1}{c|}{5} &
+  \multicolumn{1}{c|}{\$ 2.500} &
+  \multicolumn{1}{c|}{\$ 12.500} \\ \hline
+  
+Transceiver de radio &
+  \multicolumn{1}{c|}{5} &
+  \multicolumn{1}{c|}{\$ 1.500} &
+  \multicolumn{1}{c|}{\$ 7.500} \\ \hline
+  
+Módulo de GSM &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$ 10.000} &
+  \multicolumn{1}{c|}{\$ 10.000} \\ \hline
+  
+Modelo de PBC final &
+  \multicolumn{1}{c|}{10} &
+  \multicolumn{1}{c|}{\$ 500} &
+  \multicolumn{1}{c|}{\$ 5.000} \\ \hline
+  
+Sensor de temperatura &
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$ 1.000} &
+  \multicolumn{1}{c|}{\$ 2.000} \\ \hline
+  
+Sensor de humedad de suelo &
+  \multicolumn{1}{c|}{2} &
+  \multicolumn{1}{c|}{\$ 3.500} &
+  \multicolumn{1}{c|}{\$ 7.000} \\ \hline
+  
+Panel solar &
+  \multicolumn{1}{c|}{5} &
+  \multicolumn{1}{c|}{\$ 1.500} &
+  \multicolumn{1}{c|}{\$ 7.500} \\ \hline
+  
+Supercapacitor &
+  \multicolumn{1}{c|}{6} &
+  \multicolumn{1}{c|}{\$ 1.000} &
+  \multicolumn{1}{c|}{\$ 6.000} \\ \hline
+  
+Batería de litio &
+  \multicolumn{1}{c|}{3} &
+  \multicolumn{1}{c|}{\$ 3.000} &
+  \multicolumn{1}{c|}{\$ 9.000} \\ \hline
+  
+Circuito de protección para batería de litio &
+  \multicolumn{1}{c|}{3} &
+  \multicolumn{1}{c|}{\$ 400} &
+  \multicolumn{1}{c|}{\$ 1.200} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$ 82.700} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -545,22 +524,16 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+   
+   30 \% de los costos directos   &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{\$ 24.810} &
+  \multicolumn{1}{c|}{\$ 24.810} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{24.810} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & \$ 107.510
    \\ \hline
 \end{tabularx}%
 \end{table}
