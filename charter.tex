@@ -72,6 +72,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive                 & 4 de julio de 2023 \\ \hline
 2      & Se completa hasta el punto 9 inclusive					& 12 de julio de 2023 \\ \hline
 3      & Se completa hasta el punto 12 inclusive				& 25 de julio de 2023 \\ \hline
+3      & Se completan todas las secciones				& 2 de agosto de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -558,45 +559,45 @@ a) A continuación se identifican los riesgos principales y sus consecuencias, e
 
 \begin{enumerate}
 \item severidad (S), del 1 al 10, siendo 10 el grado más alto de importancia para sus consecuencias.
-\item ocurrencia (O), del 1 al 10, siendo 10 el grado m´as alto de probabilidad de ocurrencia.
+\item ocurrencia (O), del 1 al 10, siendo 10 el grado más alto de probabilidad de ocurrencia.
 \item nivel de prioridad de riesgo (RPN), que se calcula como el producto de los anteriores y representa un nivel relativo de importancia que permite comparar riesgos.
 \end{enumerate}
 
 
 Riesgo 1: Detección de errores en el diseño de los PCB entregables a cliente.
 \begin{itemize}
-	\item Severidad (S): 4,
-	\item Probabilidad de ocurrencia (O): 3,
+	\item Severidad (S): 4, encontrar un error en el diseño de placas implicaría un aumento en el tiempo de desarrollo y costos no previstos aunque no es esperable que sea sigificativo.
+	\item Probabilidad de ocurrencia (O): 2, previo al diseño de las placas entregables a cliente se realizarán placas de prueba para validar el funcionamiento y hacer pruebas de sistema, por lo ya habrán pruebas previas que validen el diseño.
 \end{itemize}   
 
 Riesgo 2: Demoras ocasinadas por aduana durante el proceso de importación de componentes.
 \begin{itemize}
-	\item Severidad (S): 3,
-	\item Probabilidad de ocurrencia (O): 6,
+	\item Severidad (S): 8, según sea el monto de lo que se importe y disposiciones internas de aduana, el pedido puede permanecer retenido un tiempo entre semanas o hasta incluso meses y esto afectaría significativamente al proyecto.
+	\item Probabilidad de ocurrencia (O): 6, en el contexto macroeconómico actual se espera que puedan adoptarse medidas que restrinjan la importación de componentes electrónicos y afines.
 \end{itemize}
 
 Riesgo 3: Destrucción o extravios de prototipos.
 \begin{itemize}
-	\item Severidad (S): 7,
-	\item Probabilidad de ocurrencia (O): 5,
+	\item Severidad (S): 7, esto puede afectar los tiempos de desarrollo con demoras significativas si esto ocurriese, por ejemplo, durante las pruebas de sistema.
+	\item Probabilidad de ocurrencia (O): 4, a pesar de que todos los módulos estarán a la interperie durante las pruebas, se manendrán en un ambiente controlado.
 \end{itemize}
 
-Riesgo 4: Dificultad en la implementación del protocolo de acceso al medio.
+Riesgo 4: Dificultad mayor a la esperada en la implementación del protocolo de acceso al medio.
 \begin{itemize}
-	\item Severidad (S): 6,
-	\item Probabilidad de ocurrencia (O): 7,
+	\item Severidad (S): 7, esto podría aumentar el tiempo de diseño de sistema, a nivel de que si no se desarrolla correctamente afectaría en gran medida a la integridad y pérdida de los datos transmitidos.
+	\item Probabilidad de ocurrencia (O): 3, siendo que se espera una baja tasa de datos generada por los nodos sensores, no existirá gran concurrencia de datos y por ende no hay necesidad de implementar algoritmos ni protocolos de gran complejidad.
 \end{itemize}
 
 Riesgo 5: Cambio significativo del costo de los componentes y materiales necesarios.
 \begin{itemize}
-	\item Severidad (S): 3,
-	\item Probabilidad de ocurrencia (O): 6,
+	\item Severidad (S): 3, en este proyecto no hay componentes de cuyo precio sea elevado, por lo que un aumento porcentual no implicaría sobrecostos importantes.
+	\item Probabilidad de ocurrencia (O): 6, es altamente esperable que en el contexto económico actual incrementen los precios de componentes electrónicos, tanto a nivel local o bien la cotización del dolar para su importación. 
 \end{itemize}
 
 Riesgo 6: Dificultad mayor a la prevista para el establecimiento de los enlaces de radio.
 \begin{itemize}
-	\item Severidad (S): 8,
-	\item Probabilidad de ocurrencia (O): 6,
+	\item Severidad (S): 9, si no pudiese implementarse el enlace de radio el proyecto sería completamente disfuncional, por lo que es necesario asegurar el establecimiento de dicho enlace.
+	\item Probabilidad de ocurrencia (O): 6, considerando que para disminuir tiempo de desarrollo se utilizarán módulos comerciales, es posible que el modelo elegido tenga errores de diseño que contribuyan negativamente al establecimiento del enlace de radio.
 \end{itemize}
 
 
@@ -609,22 +610,22 @@ b) A continuación se presenta la tabla de gestión de riesgos, con el objetivo 
 \rowcolor[HTML]{C0C0C0} 
 N° & Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 1  & Detección de errores en el diseño de los PCB entregables a cliente
-& 4   & 3   & 12     & -    & -    & -      \\ \hline
+& 4   & 2   & 8     & -    & -    & -      \\ \hline
 
 2  & Demoras ocasinadas por aduana durante el proceso de importación de componentes
-& 3   & 6   & 18     & -    & -    & -      \\ \hline
+& 8   & 6   & 48     &     &     &       \\ \hline
 
 3  & Destrucción o extravios de prototipos
-& 7   & 5   & 35     & -    & -    & -      \\ \hline
+& 7   & 4   & 28     & -    & -    & -      \\ \hline
 
 4  & Dificultad en la implementación del protocolo de acceso al medio
-& 6   & 7   & 42     &    &    &      \\ \hline
+& 7   & 3   & 21     &    &    &      \\ \hline
 
 5  & Cambio significativo del costo de los componentes y materiales necesarios
 & 3   & 6   & 18     & -    & -    & -      \\ \hline
 
 6  & Dificultad mayor a la prevista para el establecimiento de los enlaces de radio
-& 8   & 6   & 48     &     &     &       \\ \hline
+& 10   & 6   & 60     &     &     &       \\ \hline
 \end{tabularx}%
 \end{table}
 
