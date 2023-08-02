@@ -553,65 +553,99 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+
+a) A continuación se identifican los riesgos principales y sus consecuencias, el método para estimar su importacia consitirá en el análisis de los siguientes parámetros:
+
+\begin{enumerate}
+\item severidad (S), del 1 al 10, siendo 10 el grado más alto de importancia para sus consecuencias.
+\item ocurrencia (O), del 1 al 10, siendo 10 el grado m´as alto de probabilidad de ocurrencia.
+\item nivel de prioridad de riesgo (RPN), que se calcula como el producto de los anteriores y representa un nivel relativo de importancia que permite comparar riesgos.
+\end{enumerate}
+
+
+Riesgo 1: Detección de errores en el diseño de los PCB entregables a cliente.
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 4,
+	\item Probabilidad de ocurrencia (O): 3,
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: Demoras ocasinadas por aduana durante el proceso de importación de componentes.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 3,
+	\item Probabilidad de ocurrencia (O): 6,
 \end{itemize}
 
-Riesgo 3:
+Riesgo 3: Destrucción o extravios de prototipos.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 7,
+	\item Probabilidad de ocurrencia (O): 5,
+\end{itemize}
+
+Riesgo 4: Dificultad en la implementación del protocolo de acceso al medio.
+\begin{itemize}
+	\item Severidad (S): 6,
+	\item Probabilidad de ocurrencia (O): 7,
+\end{itemize}
+
+Riesgo 5: Cambio significativo del costo de los componentes y materiales necesarios.
+\begin{itemize}
+	\item Severidad (S): 3,
+	\item Probabilidad de ocurrencia (O): 6,
+\end{itemize}
+
+Riesgo 6: Dificultad mayor a la prevista para el establecimiento de los enlaces de radio.
+\begin{itemize}
+	\item Severidad (S): 8,
+	\item Probabilidad de ocurrencia (O): 6,
 \end{itemize}
 
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+b) A continuación se presenta la tabla de gestión de riesgos, con el objetivo de representar el nivel de prioridad de los riesgos listados previamente:
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+N° & Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
+1  & Detección de errores en el diseño de los PCB entregables a cliente
+& 4   & 3   & 12     & -    & -    & -      \\ \hline
+
+2  & Demoras ocasinadas por aduana durante el proceso de importación de componentes
+& 3   & 6   & 18     & -    & -    & -      \\ \hline
+
+3  & Destrucción o extravios de prototipos
+& 7   & 5   & 35     & -    & -    & -      \\ \hline
+
+4  & Dificultad en la implementación del protocolo de acceso al medio
+& 6   & 7   & 42     &    &    &      \\ \hline
+
+5  & Cambio significativo del costo de los componentes y materiales necesarios
+& 3   & 6   & 18     & -    & -    & -      \\ \hline
+
+6  & Dificultad mayor a la prevista para el establecimiento de los enlaces de radio
+& 8   & 6   & 48     &     &     &       \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 40
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+Riesgo 1: Se buscará implementar protocolos que previamente fuesen probados en aplicaciones similares, de tal forma de asegurar su viabilidad de implementación en microcontroladores de pestaciones limitadas.
+\begin{itemize}
+\item Severidad (S): 
+\item Probabilidad de ocurrencia (O): 
+\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
 
-\end{consigna}
+Riesgo 2: Siendo que el enlace de radio es uno de los elementos más críticos del proyecto, se le asignará una mayor prioridad temporal a la validación del enlace para poder confirmar el transceiver utilizado. De esta forma se minimiza el proceso de reingeniería en caso de ser necesario un cambio sobre dicho aspecto.
+
+\begin{itemize}
+\item Severidad (S): 
+\item Probabilidad de ocurrencia (O): 
+\end{itemize}
 
 
 \section{14. Gestión de la calidad}
