@@ -619,13 +619,13 @@ N° & Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 & 7   & 4   & 28     & -    & -    & -      \\ \hline
 
 4  & Dificultad en la implementación del protocolo de acceso al medio
-& 7   & 3   & 21     &    &    &      \\ \hline
+& 7   & 3   & 21     & -   & -   & -     \\ \hline
 
 5  & Cambio significativo del costo de los componentes y materiales necesarios
 & 3   & 6   & 18     & -    & -    & -      \\ \hline
 
 6  & Dificultad mayor a la prevista para el establecimiento de los enlaces de radio
-& 10   & 6   & 60     &     &     &       \\ \hline
+& 10   & 6   & 60     & 6    & 3    & 18      \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -634,18 +634,18 @@ Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean may
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: Se buscará implementar protocolos que previamente fuesen probados en aplicaciones similares, de tal forma de asegurar su viabilidad de implementación en microcontroladores de pestaciones limitadas.
+Riesgo 2: Para esto se buscará minimizar la cantidad de componentes electrónicos importados desde el exterior, y en caso de ser necesario, tener mayor discresión en el volumen de compra para no ser retenido por aduana.
 \begin{itemize}
-\item Severidad (S): 
-\item Probabilidad de ocurrencia (O): 
+\item Severidad (S*): 8, en caso de que ocurra, sería igual de severo para el proyecto.
+\item Probabilidad de ocurrencia (O*): 2, con la técnica de evasión mencionada, es esperable que la probabilidad de ocurrencia disminuya significativamente.
 \end{itemize}
 
 
-Riesgo 2: Siendo que el enlace de radio es uno de los elementos más críticos del proyecto, se le asignará una mayor prioridad temporal a la validación del enlace para poder confirmar el transceiver utilizado. De esta forma se minimiza el proceso de reingeniería en caso de ser necesario un cambio sobre dicho aspecto.
+Riesgo 6: Siendo que el enlace de radio es uno de los elementos más críticos del proyecto, se le asignará una mayor prioridad temporal al estudio de alternativas y a la validación del enlace, para así confirmar el transceiver utilizado. De esta forma se minimiza el proceso de reingeniería en caso de ser necesario un cambio sobre dicho aspecto.
 
 \begin{itemize}
-\item Severidad (S): 
-\item Probabilidad de ocurrencia (O): 
+\item Severidad (S*): 6, la severidad se verá disminuida en el sentido de que al ocurrir más temprano en el tiempo se tiene mayor margen de maniobra.
+\item Probabilidad de ocurrencia (O*): 3, ya que habiendo realizado un análisis detallado es menos probable que la alternativa elegida presente fallas en el enlace de radio.
 \end{itemize}
 
 
