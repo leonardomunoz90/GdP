@@ -40,7 +40,7 @@ codirector, % Uncomment to add a codirector to the title page
  
 \fechaINICIO{20 de junio de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{15 de agosto de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{TBD}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{Abril de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -94,7 +94,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 625 h de trabajo y \textcolor{red}{\$800.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el desarrollo de una red de sensores distribuida para la medición de parámetros ambientales, y tendrá un presupuesto preliminar estimado de 625 h de trabajo y \$1.488.760, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -287,6 +287,15 @@ Para el desarrollo del presente proyecto se toman en cuenta los siguientes supue
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
+En esta sección se enuncian las historias de usuario, cada una de ellas llevará un puntaje según 3 aspectos:
+\begin{enumerate}
+	\item Dificultad: cantidad de trabajo a realizar.
+	\item Complejidad: complejidad de trabajo a realizar.
+	\item Riesgo: incertidumbre del trabajo a realizar.
+\end{enumerate}
+
+Se utilizará una escala siguiendo la serie de Fibonacci, donde un número mayor implica mayor costo. Si la suma de los 3 componentes no da un número de la serie, se eligirá el valor mayor más cercano.
+
 A continuación se muestra el puntaje que se asignará a cada item dentro de los \textit{story points}:
 
 \begin{enumerate}
@@ -418,7 +427,7 @@ Total de horas del proyecto: 625 h.
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-En las figuras \ref{fig:AoN-1} y \ref{fig:AoN-2} se muestra el diagrama de AoN (Activity on Node de sus siglas en inglés) del presente proyecto, siguiendo el desgloce de tareas reviamente definido en la sección \ref{sec:wbs}. Las referencias temporales de cada una de las actividades se encuentran especificadas en horas. 
+En las figuras \ref{fig:AoN-1} y \ref{fig:AoN-2} se muestra el diagrama de AoN (Activity on Node de sus siglas en inglés) del presente proyecto, siguiendo el desgloce de tareas previamente definido en la sección \ref{sec:wbs}. Las referencias temporales de cada una de las actividades se encuentran especificadas en horas. 
 
 Puede obsservase una flecha de color rojo entre tareas, esto se usó para indicar el camino crítico del proyecto, el cual suma un total de 305 horas.
 
@@ -460,6 +469,8 @@ En la figura \ref{fig:diagGantt}, se muestra el diagrama de Gantt del presente p
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
+En la siguiente tabla se presenta detalladamente el valor de los elementos necesarios para el desarrollo del proyecto.
+
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
@@ -471,6 +482,11 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+
+  Horas de ingeniería &
+  \multicolumn{1}{c|}{625} &
+  \multicolumn{1}{c|}{\$ 1700} &
+  \multicolumn{1}{c|}{\$ 1.062.500} \\ \hline
   
 Placa de desarrollo STM32G031 &
   \multicolumn{1}{c|}{3} &
@@ -528,7 +544,7 @@ Circuito de protección para batería de litio &
   \multicolumn{1}{c|}{\$ 1.200} \\ \hline
 
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{\$ 82.700} \\ \hline
+  \multicolumn{1}{c|}{\$ 1.145.200} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -539,13 +555,13 @@ Descripción &
    
    30 \% de los costos directos   &
   \multicolumn{1}{c|}{1} &
-  \multicolumn{1}{c|}{\$ 24.810} &
-  \multicolumn{1}{c|}{\$ 24.810} \\ \hline
+  \multicolumn{1}{c|}{\$ 343.560} &
+  \multicolumn{1}{c|}{\$ 343.560} \\ \hline
 
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{24.810} \\ \hline
+  \multicolumn{1}{c|}{343.560} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} & \$ 107.510
+\multicolumn{3}{|c|}{TOTAL} & \$ 1.488.760
    \\ \hline
 \end{tabularx}%
 \end{table}
