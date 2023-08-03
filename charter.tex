@@ -659,72 +659,72 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 \item Req 1.1.2) En cada red debe haber un único nodo gateway.
 
 \begin{itemize}
-	\item Verificación: Durante las pruebas se pondrá en marcha un único nodo gateway de manera simultánea.
-	\item Validación: Se le solicitará al cliente que valide el requerimiento mediante inspección visual.
+	\item Verificación: durante las pruebas se pondrá en marcha un único nodo gateway de manera simultánea.
+	\item Validación: se validará mediante inspección visual por parte del cliente.
 \end{itemize}
 
 
 \item Req 1.1.3) El nodo gateway debe enviar los datos a internet mediante la red celular.
 
 \begin{itemize}
-	\item Verificación: Se eliminarán todas las vías de comunicación posibles, a excepción de internet, entre el nodo gateway la computadora utilizada para la recepción de paquetes.
-	\item Validación: Se validará la recepción de datos en una computadora con conexión a internet en una ubicación distante al nodo gateway.
+	\item Verificación: se eliminarán todas las vías de comunicación posibles, a excepción de internet, entre el nodo gateway y la computadora utilizada para la recepción de paquetes.
+	\item Validación: se validará la recepción de datos en una computadora con conexión a internet en una ubicación distante al nodo gateway.
 \end{itemize}
 
 \item Req 1.1.6) Los módulos deben tener un indicador lumínico para indicar errores.
 
 \begin{itemize}
-	\item Verificación: Se forzará cada uno de los errores por software y se verificará que el encendido de los indicadores se corresponda con una lista de errores predefinidos.
-	\item Validación: Se demostrará al cliente el encendido de los indicadores al forzar errores sobre los prototipos en campo.
+	\item Verificación: se forzará cada uno de los errores por software y se verificará el encendido de los indicadores se corresponda con una lista de errores predefinidos.
+	\item Validación: se demostrará al cliente el encendido de los indicadores al forzar errores sobre los prototipos en campo.
 \end{itemize}
 
 \item Req 1.2.2) Los módulo deben almacenar energía en una batería.
 
 \begin{itemize}
-	\item Verificación: Se verificarán ciclos de carga y descarga para validar la funcionalidad de la batería.
-	\item Validación: Se le solicitará al cliente que valide esto mediate inspección visual.
+	\item Verificación: se verificarán ciclos de carga y descarga para validar la funcionalidad de la batería.
+	\item Validación: se le solicitará al cliente que valide esto mediate inspección visual.
 \end{itemize}
 
 \item Req 1.2.3) Todos los módulos deben enviar el porcentaje de batería restante de forma periódica.
 
 \begin{itemize}
-	\item Verificación: Se tomarán mediciones de la tensión de la batería durante ciclos de carga y descarga con un multímetro para posteriormente compararlo con el valor enviado en las tramas de datos. 
-	\item Validación: Se le mostrará al cliente el campo de porcentaje de batería restante en los mensajes de los nodos.
+	\item Verificación: se tomarán mediciones de la tensión de la batería durante ciclos de carga y descarga con un multímetro para posteriormente compararlo con el valor enviado en las tramas de datos. 
+	\item Validación: se le mostrará al cliente el campo de porcentaje de batería restante en los mensajes de los nodos.
 \end{itemize}
 
 \item Req 1.2.4) La vida útil de la batería debe ser mayor a 10 años.
 
 \begin{itemize}
-	\item Verificación: Se vericará la cantidad de ciclos de carga con la hoja de datos de fabricante.
-	\item Validación: Se le otrogará al cliente documentos del fabricante que certifiquen la cantidad de ciclos de carga de la batería utilizada en los módulos.
+	\item Verificación: se vericará la cantidad de ciclos de carga contra la hoja de datos de fabricante.
+	\item Validación: se le otrogará al cliente documentos del fabricante que certifiquen la cantidad de ciclos de carga de la batería utilizada en los módulos.
 \end{itemize}
 
 \item Req 1.3.1) Cada nodo envía una única medición por trama.
 
 \begin{itemize}
-	\item Verificación: Se forzarán escenarios donde ocurran mediciones simultáneas, a fin de comprobar que estas se realizan en forma individual.
-	\item Validación: Se mostrará un panel de mediciones en tiempo real a cliete para que pueda validarlo.
+	\item Verificación: se forzarán escenarios donde ocurran mediciones simultáneas, a fin de comprobar que estas se realizan en forma individual.
+	\item Validación: se mostrará un panel de mediciones en tiempo real a cliete para que pueda validarlo.
 \end{itemize}
 
 \item Req 1.3.2) El nodo gateway debe tener una memoria auxiliar donde almacene los datos.
 
 \begin{itemize}
-	\item Verificación: Se verificará el correcto grabado en memoria de datos conocidos previamente.
-	\item Validación: Se realizará una adquisición de mediciones a lo largo de un tiempo predeterminado y presentarán los archivos frente al cliente.
+	\item Verificación: se verificará el correcto grabado en memoria con datos previamente conocidos.
+	\item Validación: se realizará una adquisición de mediciones a lo largo de un tiempo predeterminado y se presentarán los archivos al cliente.
 \end{itemize}
 
 \item Req 1.3.3) El nodo gateway debe colocar una estampa de tiempo a los datos.
 
 \begin{itemize}
-	\item Verificación: Se verificará sobre un intervalo de tiempo significativo la coherencia temporal en los datos adquiridos.
-	\item Validación: Se le indicará a cliente el campo de estampa de tiempo en los paquetes recibidos por internet.
+	\item Verificación: se verificará sobre un intervalo de tiempo significativo la coherencia temporal en los datos adquiridos.
+	\item Validación: se le indicará a cliente el campo que se corresponde con la estampa de tiempo en los paquetes recibidos.
 \end{itemize}
 
 \item Req 4.1. Los datos enviados a internet deben tener un formato JSON, de  tal forma de ser compatible con inferces de usuario desarrolladas por terceros.
 
 \begin{itemize}
-	\item Verificación: Se verificará el correcto formato de todas la variables que puedan ser enviadas por los nodos sensores.
-	\item Validación: Se demostrará a cliente el formato de tramas mediante interfaces de usuario capaces de reconocer tramas JSON y validar su formato.
+	\item Verificación: se verificará el correcto formato de todas la variables que puedan ser enviadas por los nodos sensores.
+	\item Validación: se demostrará a cliente el formato de tramas mediante interfaces de usuario capaces de reconocer tramas JSON y validar su formato.
 \end{itemize}
 
 \end{itemize}
