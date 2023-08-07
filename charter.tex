@@ -40,7 +40,7 @@ codirector, % Uncomment to add a codirector to the title page
  
 \fechaINICIO{20 de junio de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{15 de agosto de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{Abril de 2024}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{abril de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -580,10 +580,10 @@ a) A continuación se identifican los riesgos principales y sus consecuencias, e
 \end{enumerate}
 
 
-Riesgo 1: detección de errores en el diseño de los PCB entregables a cliente.
+Riesgo 1: detección de errores en el diseño de los PCB entregables al cliente.
 \begin{itemize}
 	\item Severidad (S): 4, encontrar un error en el diseño de placas implicaría un aumento en el tiempo de desarrollo y costos no previstos, aunque no es esperable que sea sigificativo.
-	\item Probabilidad de ocurrencia (O): 2, previo al diseño de las placas entregables a cliente, se realizarán placas de prueba para validar su funcionamiento, por lo ya habrán pruebas previas que validen el diseño.
+	\item Probabilidad de ocurrencia (O): 2, previo al diseño de las placas entregables al cliente, se realizarán placas de prueba para validar su funcionamiento, por lo que ya habrán pruebas previas que validen el diseño.
 \end{itemize}   
 
 Riesgo 2: demoras ocasinadas por aduana durante el proceso de importación de componentes.
@@ -592,7 +592,7 @@ Riesgo 2: demoras ocasinadas por aduana durante el proceso de importación de co
 	\item Probabilidad de ocurrencia (O): 6, en el contexto macroeconómico actual es esperable que se adopten medidas que restrinjan la importación de componentes electrónicos y afines.
 \end{itemize}
 
-Riesgo 3: destrucción o extravios de prototipos durante pruebas.
+Riesgo 3: destrucción o extravíos de prototipos durante pruebas.
 \begin{itemize}
 	\item Severidad (S): 7, esto puede afectar los tiempos del proyecto de forma significativa.
 	\item Probabilidad de ocurrencia (O): 4, a pesar de que todos los módulos estarán a la interperie durante las pruebas, se manendrán en un ambiente controlado.
@@ -600,7 +600,7 @@ Riesgo 3: destrucción o extravios de prototipos durante pruebas.
 
 Riesgo 4: dificultad mayor a la esperada en la implementación del protocolo de acceso al medio.
 \begin{itemize}
-	\item Severidad (S): 7, esto podría aumentar el tiempo de diseño de sistema, a nivel de que si no se desarrolla correctamente, afectará en gran medida a la integridad y ocasionaría pérdida de los datos transmitidos.
+	\item Severidad (S): 7, esto podría aumentar el tiempo de diseño del sistema, a nivel de que si no se desarrolla correctamente, afectará en gran medida a la integridad y ocasionaría pérdida de los datos transmitidos.
 	\item Probabilidad de ocurrencia (O): 3, siendo que se espera que los nodos sensores generen una baja tasa de datos, no existirá gran concurrencia de datos y por ende no hay necesidad de implementar algoritmos ni protocolos de gran complejidad.
 \end{itemize}
 
@@ -631,7 +631,7 @@ N° & Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 2  & Demoras ocasinadas por aduana durante el proceso de importación de componentes
 & 8   & 6   & 48     & 8    & 2    & 16      \\ \hline
 
-3  & Destrucción o extravios de prototipos
+3  & Destrucción o extravíos de prototipos
 & 7   & 4   & 28     & -    & -    & -      \\ \hline
 
 4  & Dificultad en la implementación del protocolo de acceso al medio
@@ -645,8 +645,7 @@ N° & Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 40.
+Criterio adoptado: se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 40.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
@@ -694,10 +693,10 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 	\item Validación: se demostrará al cliente el encendido de los indicadores al forzar errores sobre los prototipos en campo.
 \end{itemize}
 
-\item Req 1.2.2) Los módulo deben almacenar energía en una batería.
+\item Req 1.2.2) Los módulos deben almacenar energía en una batería.
 
 \begin{itemize}
-	\item Verificación: se verificarán ciclos de carga y descarga para validar la funcionalidad de la batería.
+	\item Verificación: se verificarán los ciclos de carga y descarga para validar la funcionalidad de la batería.
 	\item Validación: se le solicitará al cliente que valide esto mediate inspección visual.
 \end{itemize}
 
@@ -711,7 +710,7 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 \item Req 1.2.4) La vida útil de la batería debe ser mayor a 10 años.
 
 \begin{itemize}
-	\item Verificación: se vericará la cantidad de ciclos de carga contra la hoja de datos de fabricante.
+	\item Verificación: se verificará la cantidad de ciclos de carga contra la hoja de datos del fabricante.
 	\item Validación: se le otrogará al cliente documentos del fabricante que certifiquen la cantidad de ciclos de carga de la batería utilizada en los módulos.
 \end{itemize}
 
@@ -719,7 +718,7 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 
 \begin{itemize}
 	\item Verificación: se forzarán escenarios donde ocurran mediciones simultáneas, a fin de comprobar que estas se realizan en forma individual.
-	\item Validación: se mostrará un panel de mediciones en tiempo real a cliete para que pueda validarlo.
+	\item Validación: se mostrará un panel de mediciones en tiempo real al cliente para que pueda validarlo.
 \end{itemize}
 
 \item Req 1.3.2) El nodo gateway debe tener una memoria auxiliar donde almacene los datos.
@@ -740,7 +739,7 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 
 \begin{itemize}
 	\item Verificación: se verificará el correcto formato de todas la variables que puedan ser enviadas por los nodos sensores.
-	\item Validación: se demostrará a cliente el formato de tramas mediante interfaces de usuario capaces de reconocer tramas JSON y validar su formato.
+	\item Validación: se demostrará al cliente el formato de tramas mediante interfaces de usuario capaces de reconocer tramas JSON y validar su formato.
 \end{itemize}
 
 \end{itemize}
@@ -753,14 +752,14 @@ A continuación se listan las verificaciones y validaciones asociadas a cada req
 	
 	\begin{enumerate}
 	\item Responsable: Leonardo Muñoz.
-	\item Se revisará el cumplimiento de los requerimientos, validar la estimación de tiempos para las tareas y analizar si los planes de mitigación de riesgo fueron efectivos.
+	\item Se revisará el cumplimiento de los requerimientos, se validará la estimación de tiempos para las tareas y se analizará si los planes de mitigación de riesgo fueron efectivos.
 	\end{enumerate}
 	
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
 	
 	\begin{enumerate}
 	\item Responsable: Leonardo Muñoz
-	\item Se evaluará si las técnicas de diseño de software utilizadas fueron las efectivas y se listará como estas aportaron a la solución de problemas.
+	\item Se evaluará si las técnicas de diseño de software utilizadas fueron las efectivas y se listará cómo estas aportaron a la solución de problemas.
 	\end{enumerate}
 	
 	 
